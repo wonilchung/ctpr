@@ -102,7 +102,7 @@ void CPRMpiProc(arma::field<arma::fvec> & Ys, arma::field<arma::fmat> & Xs, cons
 			lambda1(i) = lambda1_max * arma::exp(-6.907755 * arma::linspace<arma::fvec>((float)flamb1/100.0, (float)llamb1/100.0, llamb1-flamb1+1));  
 		}
 	} else {
-		if ( == 1 && q > 1) {
+		if (lambda1.n_elem == 1 && q > 1) {
 			arma::fvec tempt = lambda1(0);
 			lambda1.set_size(q);
 			for (i=0; i<q; i++) {
